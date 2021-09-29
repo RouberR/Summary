@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+
+body{
+    backgroundColor: #f1f1f1;
+    color: #0f141e;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:active{
+    color: blue;
+}
+
+a:visited{
+    color:grey;
+}
+
+
+.avatar{
+    width: 200px;
+    border-radius: 28px;
+    box-shadow: 4px 4px 14px black;
+}
+
+.info{
+    display:flex;
+    margin-bottom: 20px;
+    
+}
+
+.info-text{
+    margin-left: 20px;
+
+}
+
+.info p{
+    color: #86898f;
+    margin: 0;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 10px;
+
+}
+
+.social {
+    background: red;
+    padding: 15px;
+}
+
+.contans{
+    max-width: 750px;
+    margin: auto;
+}
+
+.bg-yellow{
+    background: #fff9dc
+}
+
+.bg-green{
+    background: #e5ffe7
+}
+
+.bg-red{
+    background: #ffe5e5
+}
+
+.bg-purple{
+    background: #d181db9f
+}
+
+.card{
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.card h2{
+    margin-bottom: 10px;
+}
+
+
+
+.table td{
+    padding-bottom: 20px;
+}
+
+.table td:nth-child(1){
+    color:rgb(11, 150, 243);
+    width: 110px;
+    font-weight: bold;
+}
+
+.table td:nth-child(2){
+    color:teal;
+    
+}
+
+.table td:nth-child(3){
+    font-weight: bold;
+    color:rgb(11, 150, 243);
+    width: 170px
+}
+
+h2{
+    text-align: center;
+    color:green;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.table-work td:nth-child(1){
+    color:tomato;
+    width: 110px;
+}
+
+.table-work td:nth-child(2){
+    color:teal;
+    width: 60%
+}
+
+.table-work td:nth-child(3){
+    color: red;
+    text-align:left;
+}
+.table-work td{
+    padding-bottom: 20px;
+}
+
+h4{
+    color: grey;
+    padding-left: 20px;
+}
+
+h4 .git{
+    color: black;
+}
