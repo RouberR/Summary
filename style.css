@@ -31,6 +31,8 @@ a:visited{
     width: 200px;
     border-radius: 28px;
     box-shadow: 4px 4px 14px black;
+
+    
 }
 
 .info{
@@ -84,7 +86,12 @@ a:visited{
     padding: 15px 20px;
     margin-bottom: 20px;
     border-radius: 20px;
+    box-shadow: 2px 3px 2px 2px rgba(0, 0, 0, 0.281);
+
+  
 }
+  
+
 
 .card h2{
     margin-bottom: 10px;
@@ -118,6 +125,7 @@ h2{
     color:green;
     padding-bottom: 10px;
     font-weight: bold;
+    
 }
 
 .table-work td:nth-child(1){
@@ -145,4 +153,8 @@ h4{
 
 h4 .git{
     color: black;
+}
+
+li{
+    padding-bottom: 5px;
 }
