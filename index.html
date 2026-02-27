@@ -1,117 +1,364 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Evgen</title>
-    <link href="style.css" 
-    rel="stylesheet"/>
-    <link rel="icon"  href="HERO.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yauheni Fiadosenka — React Native Developer</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <div class="contans">
-                <div class="info">
-                        <img src="https://sun9-37.userapi.com/impg/yOnKDhAGKbNj0d0CDAvo5Jn8rLthP8_z7t-9lw/dAp18sTB2LI.jpg?size=1200x1600&quality=96&sign=4a8976d72d6edd3dd0156f8fe858f618&type=album" 
-                        alt="Foto"
-                        class="avatar">
-                     <div class="info-text">
-                        <h1>Yauheni Fiadosenko</h1>
-                        <p><em>Age: 23 yers</em></p>
-                        <p>Belarus, Minsk</p>
-                        <p>+375(25)5144876</p> 
-                    </div>
-                </div>      
 
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Yauheni Fiadosenka</a>
+      <ul class="nav-links">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+        <span class="lang-option" data-lang="en">EN</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-option" data-lang="ru">RU</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-            
-     
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-greeting" data-i18n="hero.greeting">Hello, I'm</p>
+      <h1 class="hero-name" id="hero-name">Евгений <span class="accent">Федосенко</span></h1>
+      <p class="hero-role"><span class="typed" id="typed"></span><span class="cursor-blink">|</span></p>
+      <p class="hero-desc" data-i18n="hero.desc">React Native Developer with 4+ years of experience building mobile apps for iOS & Android. FinTech · HealthTech · FoodTech</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary" data-i18n="hero.btnProjects">View Projects</a>
+        <a href="#contact" class="btn btn-outline" data-i18n="hero.btnContact">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator"></div>
+    </div>
+  </section>
 
-            <div class="card bg-green">
-                <h2>Techinal Skills:</h2>
-                <ol>
-                    <li>Programming languages:JavaScript, TypeScript </li>
-                    <li>Technologies and Frameworks: React, React Native, Redux, Ant Design, SCSS, Git, Firebase </li>  
-                </ol>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title" data-i18n="about.title">About <span class="accent">Me</span></h2>
+      <div class="about-grid">
+        <div class="about-avatar">
+          <div class="avatar-ring">
+            <img src="screenshots/avatar.jpg" alt="Yauheni Fiadosenka" class="avatar-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="avatar-initials" style="display:none">EF</div>
+          </div>
+          <div class="avatar-tags">
+            <span class="tag">📍 Minsk, Belarus</span>
+            <span class="tag" data-i18n="about.tag.format">🌐 Remote / Hybrid</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <p data-i18n="about.p1">I'm a <strong>React Native Developer</strong> with 3+ years of commercial experience building mobile applications for iOS and Android. I specialize in implementing complex features, integrating business logic and third-party SDKs, optimizing performance, and ensuring high-quality user experiences.</p>
+          <p data-i18n="about.p2">I've led full development cycles — from architecture design to production support — across products in <strong>FinTech, HealthTech, and FoodTech</strong> domains.</p>
+          <p data-i18n="about.p3">I prefer working on products where I can influence technical decisions, implementation quality, and the long-term development strategy of mobile applications.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">3+</span>
+              <span class="stat-label" data-i18n="about.stat.exp">Years Experience</span>
             </div>
-
-            <div class="card bg-green">
-                <h2>English Level:</h2>
-
-                       <h4>Pre Intermediate (А2)</h4> 
-
-
-
+            <div class="stat">
+              <span class="stat-num">3</span>
+              <span class="stat-label" data-i18n="about.stat.companies">Companies</span>
             </div>
-            <div class="card bg-green">
-            <h2> Education:</h2>
-            <table class = "table">
-                <tr>
-                    <td class = "age">
-                        <h3>2020-2024 </h3>
-                    </td>
-                    <td>
-                        <strong>Vitebsk State Technological University</strong>
-                         Extramural Faculty, Information Systems and Technology.
-                       
-                    </td>
-                    <td>
-                        <strong>Software engineer</strong>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td class = "age">2017-2020</td>
-                    <td>
-                        <strong>Vitebsk State Technical College</strong>
-                        Computing machines, systems and networks.
-                    </td>
-                    <td><strong>Technician</strong></td>
-                </tr>
-
-            </table>
-               
+            <div class="stat">
+              <span class="stat-num">5+</span>
+              <span class="stat-label" data-i18n="about.stat.projects">Projects</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="card bg-red">
-            <h2>Work Experience:</h2>
-            <table class = "table">
-                <tr>
-                    <td>2020 — 2021 <br>
-                        (11 months) </td>
-                    <td><strong>Minsk meat-packing plant </strong>(Computer's operator) </td>
-                    
-                </tr>
-            </table>
+  <!-- SKILLS -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <h2 class="section-title" data-i18n="skills.title">Tech <span class="accent">Skills</span></h2>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-icon">📱</div>
+          <h3 data-i18n="skills.mobile">Mobile</h3>
+          <div class="skill-tags">
+            <span>React Native</span>
+            <span>Expo</span>
+            <span>iOS</span>
+            <span>Android</span>
+            <span>EAS</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">⚙️</div>
+          <h3 data-i18n="skills.core">Core</h3>
+          <div class="skill-tags">
+            <span>TypeScript</span>
+            <span>JavaScript</span>
+            <span>React</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🗃️</div>
+          <h3 data-i18n="skills.state">State & Data</h3>
+          <div class="skill-tags">
+            <span>Redux Toolkit</span>
+            <span>RTK Query</span>
+            <span>Redux Saga</span>
+            <span>REST API</span>
+            <span>SQLite</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🔌</div>
+          <h3 data-i18n="skills.integrations">Integrations</h3>
+          <div class="skill-tags">
+            <span>Firebase</span>
+            <span>Amplitude</span>
+            <span>Appsflyer</span>
+            <span>Finicity</span>
+            <span>Sentry</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <h3 data-i18n="skills.ui">UI & Animation</h3>
+          <div class="skill-tags">
+            <span>Reanimated</span>
+            <span>Skia</span>
+            <span>Figma</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🛠️</div>
+          <h3 data-i18n="skills.tooling">Tooling</h3>
+          <div class="skill-tags">
+            <span>Git</span>
+            <span>Jira</span>
+            <span>App Store</span>
+            <span>Google Play</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section-title" data-i18n="exp.title">Work <span class="accent">Experience</span></h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>React Native Developer</h3>
+                <a href="https://newvettech.ru/" class="timeline-company" target="_blank" rel="noopener">NewVetTech</a>
+              </div>
+              <span class="timeline-period" data-i18n="exp.nvt.period">Sep 2025 — Present</span>
             </div>
-
-            <div class="card bg-purple">
-                 <h2>About me:</h2>
-                         <h4>I want to learning IT-technology and find a good job for improve my level programming.
-                             I don't have commercial experience but I have basic skills programming now. 
-                             And most importantly, I have a great desire to develop in this direction. 
-                             I try to improve my english to intermadet level.
-                             I can read the technological documentation.
-                             Now I lerning React and React Native.
-                             My React projects: <br><br>
-                            Shop-sneakers - <a target="_blank" href="https://rouberr.github.io/shop-sneakers/#/">https://rouberr.github.io/shop-sneakers/#/ </a><br>
-                            React-pizza - <a target="_blank" href="https://react-pizza-rouber.herokuapp.com/">https://react-pizza-rouber.herokuapp.com/ </a><br>
-                            To-Do - <a target="_blank" href="https://react-to-do-rouber.herokuapp.com/">https://react-to-do-rouber.herokuapp.com/ </a><br>
-                            Anime-Top - <a target="_blank" href="https://anime-top.vercel.app/">https://anime-top.vercel.app/</a><br>
-                            My small projects are on GitHub. <a target="_blank" href="https://github.com/RouberR">https://github.com/RouberR</a><br>  <br>
-                             <a target="_blank" class = "git" href="https://github.com/RouberR?tab=repositories" target="_blank">My GitHub</a></h4>
-                         
-             </div>
-
-             <div class="card bg-yellow" >
-                <h2> Contact me: </h2>
-                <ul>
-                    <a>+375(25)6190026</a><br>
-                    <a>+375(25)5144876</a><br>
-                    <a>Rouber1998@gmail.com</a><br>
-                    <a href="https://vk.com/Rouber" target="_blank">vk.com/Rouber</a>
-                    <a href="https://www.linkedin.com/in/rouber/" target="_blank">linkedin.com/in/rouber/</a>
-                    
-                </ul>
-        
+            <div class="timeline-tags">
+              <span class="tag-tech">React Native</span>
+              <span class="tag-tech">Expo</span>
+              <span class="tag-tech">EAS</span>
+              <span class="tag-tech">Sentry</span>
             </div>
-</div>
+            <ul class="timeline-list" data-i18n-list="exp.nvt.items"></ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>React Native Developer</h3>
+                <a href="https://softarex.com" class="timeline-company" target="_blank" rel="noopener">Softarex Technologies</a>
+              </div>
+              <span class="timeline-period" data-i18n="exp.softarex.period">Oct 2023 — Sep 2025</span>
+            </div>
+            <div class="timeline-tags">
+              <span class="tag-tech">React Native</span>
+              <span class="tag-tech">Finicity</span>
+              <span class="tag-tech">Amplitude</span>
+              <span class="tag-tech">Firebase</span>
+              <span class="tag-tech">Appsflyer</span>
+            </div>
+            <ul class="timeline-list" data-i18n-list="exp.softarex.items"></ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>React Native Developer</h3>
+                <a href="https://suffix.by/" class="timeline-company" target="_blank" rel="noopener">Tapston</a>
+              </div>
+              <span class="timeline-period" data-i18n="exp.tapston.period">Feb 2022 — Oct 2023</span>
+            </div>
+            <div class="timeline-tags">
+              <span class="tag-tech">React Native</span>
+              <span class="tag-tech">Redux</span>
+              <span class="tag-tech">TypeScript</span>
+            </div>
+            <ul class="timeline-list" data-i18n-list="exp.tapston.items"></ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <h2 class="section-title" data-i18n="projects.title">Featured <span class="accent">Projects</span></h2>
+      <p class="section-subtitle" data-i18n="projects.subtitle">Some of the products I've worked on. Click a card to see details and screenshots.</p>
+      <div class="projects-grid" id="projects-grid">
+
+        <div class="project-card" onclick="openProject('metapets')">
+          <div class="project-header">
+            <div class="project-icon">🐾</div>
+            <div class="project-links">
+              <span class="project-badge badge-health">HealthTech</span>
+            </div>
+          </div>
+          <h3 class="project-title" data-i18n="projects.nvt.title">MetaPets</h3>
+          <p class="project-desc" data-i18n="projects.nvt.desc">Veterinary mobile application built from scratch. Full cycle: architecture, development, App Store & Google Play release.</p>
+          <div class="project-stack">
+            <span>React Native</span><span>Expo</span><span>EAS</span><span>Sentry</span><span>TypeScript</span>
+          </div>
+          <div class="project-arrow" data-i18n="projects.viewDetails">View Details →</div>
+        </div>
+
+        <div class="project-card" onclick="openProject('fintech')">
+          <div class="project-header">
+            <div class="project-icon">💳</div>
+            <div class="project-links">
+              <span class="project-badge badge-fin">FinTech</span>
+            </div>
+          </div>
+          <h3 class="project-title" data-i18n="projects.fintech.title">Finmatex</h3>
+          <p class="project-desc" data-i18n="projects.fintech.desc">Personal finance management app with family accounts, multi-currency support, subscriptions, discounts, and offline mode.</p>
+          <div class="project-stack">
+            <span>React Native</span><span>Finicity</span><span>Amplitude</span><span>Firebase</span><span>Appsflyer</span>
+          </div>
+          <div class="project-arrow" data-i18n="projects.viewDetails">View Details →</div>
+        </div>
+
+        <div class="project-card" onclick="openProject('ecobank')">
+          <div class="project-header">
+            <div class="project-icon">🏦</div>
+            <div class="project-links">
+              <span class="project-badge badge-fin">FinTech</span>
+            </div>
+          </div>
+          <h3 class="project-title" data-i18n="projects.ecobank.title">Ecobank</h3>
+          <p class="project-desc" data-i18n="projects.ecobank.desc">Large-scale banking app with complex architecture. Involved in full development cycle from infrastructure setup to delivery.</p>
+          <div class="project-stack">
+            <span>React Native</span><span>Redux Saga</span><span>TypeScript</span><span>REST API</span>
+          </div>
+          <div class="project-arrow" data-i18n="projects.viewDetails">View Details →</div>
+        </div>
+
+        <div class="project-card" onclick="openProject('other')">
+          <div class="project-header">
+            <div class="project-icon">📦</div>
+            <div class="project-links">
+              <span class="project-badge badge-other" data-i18n="projects.other.badge">Other</span>
+            </div>
+          </div>
+          <h3 class="project-title" data-i18n="projects.other.title">Other Projects</h3>
+          <p class="project-desc" data-i18n="projects.other.desc">Installert — zone tracking app with maps. Tap & Serve — restaurant management software. Contributed features and integrations.</p>
+          <div class="project-stack">
+            <span>React Native</span><span>Redux Toolkit</span><span>Firebase</span><span>Maps</span>
+          </div>
+          <div class="project-arrow" data-i18n="projects.viewDetails">View Details →</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title" data-i18n="contact.title">Get In <span class="accent">Touch</span></h2>
+      <p class="section-subtitle" data-i18n="contact.subtitle">I'm currently open to new opportunities. Whether you have a question or just want to say hi — my inbox is always open.</p>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:e.fiadosenka@gmail.com">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-info">
+            <span class="contact-label" data-i18n="contact.email">Email</span>
+            <span class="contact-val">e.fiadosenka@gmail.com</span>
+          </div>
+        </a>
+        <a class="contact-card" href="https://t.me/Rouber" target="_blank" rel="noopener">
+          <div class="contact-icon">✈️</div>
+          <div class="contact-info">
+            <span class="contact-label">Telegram</span>
+            <span class="contact-val">@Rouber</span>
+          </div>
+        </a>
+        <a class="contact-card" href="tel:+375255144876">
+          <div class="contact-icon">📞</div>
+          <div class="contact-info">
+            <span class="contact-label" data-i18n="contact.phone">Phone</span>
+            <span class="contact-val">+375 (25) 514-48-76</span>
+          </div>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/rouber/" target="_blank" rel="noopener">
+          <div class="contact-icon">💼</div>
+          <div class="contact-info">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-val">in/rouber</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p data-i18n="footer.text">Designed & Built by <span class="accent">Yauheni Fiadosenka</span> · 2026</p>
+  </footer>
+
+  <!-- PROJECT MODAL -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+    <div class="modal" id="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
